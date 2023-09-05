@@ -10,7 +10,7 @@ RiotAuth is a Python library that provides authentication and access to Riot Gam
 > from RiotAuth.captcha import CAPMONSTER_API
 > # Add your capmonster api
 > CAPMONSTER_API = "<API>"
-> Replace with your Riot Games credentials
+> # Replace with your Riot Games credentials
 > username = "your_username" 
 >password = "your_password" 
 >try: # Authenticate with Riot Games servers 

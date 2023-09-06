@@ -17,7 +17,7 @@ RiotAuth is a Python library that provides authentication and access to Riot Gam
 >     user_info = authentication(username, password) 
 >except Exception as e: print(f"Authentication failed: {e}")```
 
-Here's a basic example of how to use the RiotAuth library to authenticate and retrieve user data:
+
 
 ## Dependencies
 

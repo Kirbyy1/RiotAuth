@@ -52,7 +52,8 @@ class Version:
         return self.versions["riotClientBuild"]
 
     def sdk(self):
-        return sdk if (sdk := self.versions["riotClientVersion"].split(".")[1]) else "23.8.0.1382"
+        return sdk if (sdk := requests.get("https://valorant-api.com/internal/ritoclientversion").json()["data"][
+            "riotGamesApiInfo"]["VS_FIXEDFILEINFO"]["FileVersion"]) else "23.8.0.1382"
 
 
 @dataclass

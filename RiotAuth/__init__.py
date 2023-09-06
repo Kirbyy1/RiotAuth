@@ -4,7 +4,7 @@ from time import time
 import RiotAuth.exceptions
 from RiotAuth.captcha import solve_hcaptcha
 from RiotAuth.session import undetected_request_session
-from RiotAuth.utilities import Version, magic_decode, Token, User, RED_BLUE_ENDPOINTS
+from RiotAuth.utilities import Version, magic_decode, Token, User
 
 version = Version()
 
@@ -152,17 +152,4 @@ def authentication(username, password):
     return get_user_info(session, token)
 
 
-def get_wallet(access_token, user_info, session):
-    URL = f"https://eune-red.lol.sgp.pvp.net/lolinventoryservice-ledge/v1/walletsbalances?puuid={user_info['sub']}&location=lolriot.aws-euc1-prod.eun1&accountId={user_info['lol_account']['summoner_id']}&currencyTypes=RP"
-
-    headers = {
-        "Accept": "application/json",
-        "Accept-Encoding": "gzip, deflate",
-        "Authorization": f"Bearer {access_token}",
-        "Content-type": "application/json",
-        "Host": RED_BLUE_ENDPOINTS[str(user_info['region']['id']).upper()],
-        "user-agent": "LeagueOfLegendsClient/13.17.528.2266 (rcp-be-lol-inventory)"
-    }
-
-    return session.get(URL, headers=headers)
 

@@ -26,4 +26,4 @@ RiotAuth is a Python library that provides authentication and access to Riot Gam
 
 ## Acknowledgment
 
-This project took inspiration from the [PyRiotAuth](https://github.com/Bbalduzz/PyRiotAuth) repository by [Bbalduzz](https://github.com/Bbalduzz). We extend our gratitude to the original project for its contributions to Riot Games authentication in Python.
+This project took inspiration from the [PyRiotAuth](https://github.com/Bbalduzz/PyRiotAuth) repository by [Bbalduzz](https://github.com/Bbalduzz).
